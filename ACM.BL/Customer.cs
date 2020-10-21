@@ -12,11 +12,11 @@ namespace ACM.BL
         {
 
         }
-        public Customer(int CustomerId)
+        public Customer(int customerId)
         {
-            this.CustomerId = CustomerId;
+            CustomerId = customerId;
         }
-        public int CustomerId { get; private set; }
+        public int CustomerId { get; private set; } 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FullName
@@ -38,18 +38,11 @@ namespace ACM.BL
         public string EmailAddress { get; set; }
         public static int InstanceCount { get; set; }
 
-        public Customer Retrieve(int prodictId)
-        {
-            return new Customer();
-        }
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-        public bool Save()
-        {
-            return true;
-        }
+        //public List<Customer> Retrieve()
+        //{
+        //    return new List<Customer>();
+        //}
+        
         public bool Validate()
         {
             var isValid = true;

@@ -17,7 +17,7 @@ namespace ACM.BL
             this.OrderitemId = OrderItemId;
         }
         public int OrderitemId { get; private set; }
-        public int ProductId { get; set; }
+        public int ProductId { get; set; } 
         public decimal? PurchasePrice { get; set; }
         public int Quantity { get; set; }
 

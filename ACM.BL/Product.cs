@@ -23,11 +23,11 @@ namespace ACM.BL
 
         public Product Retrieve(int prodictId)
         {
-            return new Customer();
+            return new Product();
         }
         public List<Product> Retrieve()
         {
-            return new List<Customer>();
+            return new List<Product>();
         }
         public bool Save()
         {
