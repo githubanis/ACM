@@ -8,18 +8,23 @@ namespace ACM.BL
 {
     public class Order
     {
-        public Order()
+        public Order() : this(0)
         {
 
         }
         public Order(int OrderId)
         {
             this.OrderId = OrderId;
+            orderItems = new List<OrderItem>();
         }
+
+        public int CustomerId { get; set; }
         public int OrderId { get; private set; }
         public DateTimeOffset? OrderDate { get; set; }
+        public List<OrderItem> orderItems { get; set; }
+        public int ShippingAddressId { get; set; }
 
-        
+
         public List<Order> Retrieve()
         {
             return new List<Order>();
