@@ -41,11 +41,8 @@ namespace ACM.BL
         public string EmailAddress { get; set; }
         public static int InstanceCount { get; set; }
 
-        //public List<Customer> Retrieve()
-        //{
-        //    return new List<Customer>();
-        //}
-        
+        public override string ToString() => FullName;
+
         public bool Validate()
         {
             var isValid = true;

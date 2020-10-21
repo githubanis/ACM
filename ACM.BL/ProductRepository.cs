@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,12 @@ namespace ACM.BL
                 product.ProductDescription = "Yellow mini sunflowers";
                 product.CurrentPrice = 15.96M;
             }
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
             return product;
         }
-
+        
         public bool Save(Product product)
         {
             return true;
