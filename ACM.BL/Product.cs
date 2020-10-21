@@ -21,18 +21,12 @@ namespace ACM.BL
         public string ProductName { get; set; }
         public decimal? CurrentPrice { get; set; }
 
-        public Product Retrieve(int prodictId)
-        {
-            return new Customer();
-        }
+        
         public List<Product> Retrieve()
         {
-            return new List<Customer>();
+            return new List<Product>();
         }
-        public bool Save()
-        {
-            return true;
-        }
+       
         public bool Validate()
         {
             var isValid = true;
