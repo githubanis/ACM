@@ -6,41 +6,35 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class OrderItem
+    public class OrderItem : EntityBase
     {
         public OrderItem()
         {
 
         }
-        public OrderItem(int OrderItemId)
+        public OrderItem(int orderItemId)
         {
-            this.OrderitemId = OrderItemId;
+            OrderitemId = orderItemId;
         }
         public int OrderitemId { get; private set; }
         public int ProductId { get; set; } 
         public decimal? PurchasePrice { get; set; }
         public int Quantity { get; set; }
 
-        public OrderItem Retrieve(int customerId)
-        {
-            return new OrderItem();
-        }
-        public List<OrderItem> Retrieve()
-        {
-            return new List<OrderItem>();
-        }
-        public bool Save()
-        {
-            return true;
-        }
-        public bool Validate()
+        
+        public override bool Validate()
         {
             var isValid = true;
 
-            //if (string.IsNullOrEmpty(LastName)) isValid = false;
-            //if (string.IsNullOrEmpty(EmailAddress)) isValid = false;
+            if (string.IsNullOrEmpty("Anis")) isValid = false;
+            if (string.IsNullOrEmpty("Anis")) isValid = false;
 
             return isValid;
+        }
+
+        public List<OrderItem> Retrieve()
+        {
+            return new List<OrderItem>();
         }
     }
 }

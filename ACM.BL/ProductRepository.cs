@@ -19,15 +19,36 @@ namespace ACM.BL
                 product.ProductDescription = "Yellow mini sunflowers";
                 product.CurrentPrice = 15.96M;
             }
-            Object myObject = new Object();
-            Console.WriteLine($"Object: {myObject.ToString()}");
-            Console.WriteLine($"Product: {product.ToString()}");
+            //Object myObject = new Object();
+            //Console.WriteLine($"Object: {myObject.ToString()}");
+            //Console.WriteLine($"Product: {product.ToString()}");
             return product;
         }
         
         public bool Save(Product product)
         {
-            return true;
+            var success = true;
+            if (product.HasChanges)
+            {
+                if (product.isValid)
+                {
+                    if (product.IsNew)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
+
     }
 }
+  

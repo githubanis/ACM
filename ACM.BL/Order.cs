@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
         public Order() : this(0)
         {
@@ -31,12 +31,12 @@ namespace ACM.BL
             return new List<Order>();
         }
         
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
-            if (string.IsNullOrEmpty("")) isValid = false;
-            if (string.IsNullOrEmpty("")) isValid = false;
+            if (string.IsNullOrEmpty("Anis")) isValid = false;
+            if (string.IsNullOrEmpty("Anis")) isValid = false;
 
             return isValid;
         }

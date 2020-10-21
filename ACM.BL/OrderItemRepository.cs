@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class OrderRepository
+    public class OrderItemRepository
     {
-        public Order Retrieve(int orderId)
+        public OrderItem Retrieve(int orderItemId)
         {
-            Order order = new Order(orderId);
+            OrderItem orderItem = new OrderItem(orderItemId);
 
-            if (orderId == 10)
+            if (orderItemId == 1)
             {
-                order.OrderDate = new DateTimeOffset(DateTime.Now.Year, 4, 14, 10, 00, 00, new TimeSpan(7, 0, 0));
+                orderItem.Quantity = 20;
             }
-            return order;
+            return orderItem;
         }
 
-        public bool Save(Order order)
+        public bool Save(OrderItem orderItem)
         {
             var success = true;
-            if (order.HasChanges)
+
+            if (orderItem.HasChanges)
             {
-                if (order.isValid)
+                if (orderItem.isValid)
                 {
-                    if (order.IsNew)
+                    if (orderItem.IsNew)
                     {
 
                     }

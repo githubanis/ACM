@@ -56,7 +56,26 @@ namespace ACM.BL
         }
         public bool Save(Address address)
         {
-            return true;
+            var success = true;
+            if (address.HasChanges)
+            {
+                if (address.isValid)
+                {
+                    if (address.IsNew)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
